@@ -31,21 +31,20 @@ class RectangleView @JvmOverloads constructor(
                 recycle()
             }
         }
-    }
-
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-
         paint.apply {
             isAntiAlias = true
             style = Paint.Style.STROKE
             strokeWidth = lineWidth
             color = lineColor
         }
+    }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
 
         canvas?.drawRoundRect(
-            200f, 200f,
-            width / 1f - 200f, height / 5f,
+            0f, 0f,
+            width  / 1f, height / 1f,
             roundRadius, roundRadius,
             paint
         )

@@ -19,7 +19,7 @@ class LinearView @JvmOverloads constructor(
 
     init {
         context.theme.obtainStyledAttributes(
-            attrs, R.styleable.RectangleView,
+            attrs, R.styleable.LinearView,
             0, 0
         ).apply {
             try {

@@ -11,8 +11,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+
         val linearView = binding.linearView
-        linearView.addItem("MyText")
+        linearView.apply {
+            addItem("Item 1")
+            addItem("Item 2")
+            addItem("Item 3")
+        }
+
     }
 }
