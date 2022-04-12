@@ -13,19 +13,19 @@
         android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:roundRadius="50sp"
+        app:lineColor="@color/teal_700"
         app:lineWidth="5sp"
-        app:lineColor="@color/teal_700"/>
+        app:roundRadius="50sp" />
 
 
     <com.max.natifeviews.LinearView
         android:id="@+id/linearView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/rectangleView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
         app:itemBackgroundColor="#000000"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectangleView">
 
     </com.max.natifeviews.LinearView>
 
