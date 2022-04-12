@@ -7,10 +7,10 @@
     </declare-styleable>
 
     <declare-styleable name="LinearView">
-        <attr name="textSize" format="dimension"/>
-        <attr name="textColor" format="reference|color"/>
-        <attr name="backgroundColor" format="reference|color"/>
-        <attr name="padding" format="dimension"/>
+        <attr name="itemTextSize" format="dimension"/>
+        <attr name="itemTextColor" format="reference|color"/>
+        <attr name="itemBackgroundColor" format="reference|color"/>
+        <attr name="itemPadding" format="dimension"/>
     </declare-styleable>
 
 

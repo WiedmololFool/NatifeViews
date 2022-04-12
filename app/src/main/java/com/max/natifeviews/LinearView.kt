@@ -12,10 +12,10 @@ class LinearView @JvmOverloads constructor(
     defstyle: Int = 0
 ) : LinearLayout(context, attrs, defstyle) {
 
-    private val textSize: Float
-    private val textColor: Int
-    private val backgroundColor: Int
-    private val padding: Int
+    private val itemTextSize: Float
+    private val itemTextColor: Int
+    private val itemBackgroundColor: Int
+    private val itemPadding: Int
 
     init {
         context.theme.obtainStyledAttributes(
@@ -23,10 +23,10 @@ class LinearView @JvmOverloads constructor(
             0, 0
         ).apply {
             try {
-                textSize = getDimension(R.styleable.LinearView_textSize, 18f)
-                textColor = getColor(R.styleable.LinearView_textColor, Color.BLACK)
-                backgroundColor = getColor(R.styleable.LinearView_backgroundColor, Color.WHITE)
-                padding = getDimension(R.styleable.LinearView_padding, 4f).toInt()
+                itemTextSize = getDimension(R.styleable.LinearView_itemTextSize, 18f)
+                itemTextColor = getColor(R.styleable.LinearView_itemTextColor, Color.BLACK)
+                itemBackgroundColor = getColor(R.styleable.LinearView_itemBackgroundColor, Color.WHITE)
+                itemPadding = getDimension(R.styleable.LinearView_itemPadding, 4f).toInt()
             } finally {
                 recycle()
             }
@@ -36,12 +36,13 @@ class LinearView @JvmOverloads constructor(
 
     fun addItem(item: String) {
         val textView = TextView(context)
-        textView.setTextColor(Color.BLACK)
-        textView.text = item
-        textView.textSize = textSize
-        textView.setTextColor(textColor)
-        textView.setBackgroundColor(backgroundColor)
-        textView.setPadding(padding, padding, padding, padding)
+        textView.apply {
+            text = item
+            textSize = itemTextSize
+            setTextColor(itemTextColor)
+            setBackgroundColor(itemBackgroundColor)
+            setPadding(itemPadding, itemPadding, itemPadding, itemPadding)
+        }
         addView(textView)
     }
 }
