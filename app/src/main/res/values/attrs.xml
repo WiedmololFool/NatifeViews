@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RectangleView">
+        <attr name="roundRadius" format="dimension"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="lineColor" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LinearView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="backgroundColor" format="reference|color"/>
+        <attr name="padding" format="dimension"/>
+    </declare-styleable>
+
+
+</resources>
