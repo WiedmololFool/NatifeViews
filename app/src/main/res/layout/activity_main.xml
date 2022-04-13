@@ -13,8 +13,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:lineColor="@color/teal_700"
-        app:lineWidth="5sp"
-        app:roundRadius="50sp" />
+        app:lineWidth="5dp"
+        app:roundRadius="50dp" />
 
     <com.max.natifeviews.LinearView
         android:id="@+id/linearView"
@@ -22,6 +22,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:itemBackgroundColor="#000000"
-        app:itemTextColor="#ffffff" />
+        app:itemTextColor="#ffffff"
+        app:itemTextSize="18sp"
+        android:padding="4dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>

@@ -46,7 +46,7 @@ class RectangleView @JvmOverloads constructor(
 
         canvas?.drawRoundRect(
             halfLineWidth, halfLineWidth,
-            width / 1f - halfLineWidth, height / 1f - halfLineWidth,
+            width.toFloat() - halfLineWidth, height.toFloat() - halfLineWidth,
             roundRadius, roundRadius,
             paint
         )

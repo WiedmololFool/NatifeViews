@@ -3,6 +3,7 @@ package com.max.natifeviews
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.widget.LinearLayout
 import android.widget.TextView
 
@@ -38,7 +39,7 @@ class LinearView @JvmOverloads constructor(
         val textView = TextView(context)
         textView.apply {
             text = item
-            textSize = itemTextSize
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, itemTextSize)
             setTextColor(itemTextColor)
             setBackgroundColor(itemBackgroundColor)
             setPadding(itemPadding, itemPadding, itemPadding, itemPadding)
