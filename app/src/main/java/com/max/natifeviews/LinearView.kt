@@ -25,13 +25,13 @@ class LinearView @JvmOverloads constructor(
             try {
                 itemTextSize = getDimension(R.styleable.LinearView_itemTextSize, 18f)
                 itemTextColor = getColor(R.styleable.LinearView_itemTextColor, Color.BLACK)
-                itemBackgroundColor = getColor(R.styleable.LinearView_itemBackgroundColor, Color.WHITE)
+                itemBackgroundColor =
+                    getColor(R.styleable.LinearView_itemBackgroundColor, Color.WHITE)
                 itemPadding = getDimension(R.styleable.LinearView_itemPadding, 4f).toInt()
             } finally {
                 recycle()
             }
         }
-        addItem("Hello World")
     }
 
     fun addItem(item: String) {

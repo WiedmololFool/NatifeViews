@@ -12,13 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         val linearView = binding.linearView
         linearView.apply {
-            addItem("Item 1")
-            addItem("Item 2")
-            addItem("Item 3")
+            for (i in 1..15) {
+                addItem("Item $i")
+            }
         }
-
     }
 }

@@ -17,6 +17,7 @@ class RectangleView @JvmOverloads constructor(
     private val roundRadius: Float
     private val lineWidth: Float
     private val lineColor: Int
+    private val halfLineWidth: Float
 
     init {
         context.theme.obtainStyledAttributes(
@@ -24,9 +25,9 @@ class RectangleView @JvmOverloads constructor(
             0, 0
         ).apply {
             try {
-                 roundRadius = getDimension(R.styleable.RectangleView_roundRadius, 0f)
-                 lineWidth = getDimension(R.styleable.RectangleView_lineWidth, 10f)
-                 lineColor = getColor(R.styleable.RectangleView_lineColor, Color.BLACK)
+                roundRadius = getDimension(R.styleable.RectangleView_roundRadius, 0f)
+                lineWidth = getDimension(R.styleable.RectangleView_lineWidth, 10f)
+                lineColor = getColor(R.styleable.RectangleView_lineColor, Color.BLACK)
             } finally {
                 recycle()
             }
@@ -37,14 +38,15 @@ class RectangleView @JvmOverloads constructor(
             strokeWidth = lineWidth
             color = lineColor
         }
+        halfLineWidth = (lineWidth / 2f)
     }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
         canvas?.drawRoundRect(
-            0f, 0f,
-            width  / 1f, height / 1f,
+            halfLineWidth, halfLineWidth,
+            width / 1f - halfLineWidth, height / 1f - halfLineWidth,
             roundRadius, roundRadius,
             paint
         )

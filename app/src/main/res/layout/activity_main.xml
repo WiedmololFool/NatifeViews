@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="10sp"
     tools:context=".MainActivity">
-
 
     <com.max.natifeviews.RectangleView
         android:id="@+id/rectangleView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_weight="1"
         app:lineColor="@color/teal_700"
         app:lineWidth="5sp"
         app:roundRadius="50sp" />
 
-
     <com.max.natifeviews.LinearView
         android:id="@+id/linearView"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:itemBackgroundColor="#000000"
-        app:itemTextColor="#ffffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rectangleView">
+        app:itemTextColor="#ffffff" />
 
-    </com.max.natifeviews.LinearView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
